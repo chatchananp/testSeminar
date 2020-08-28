@@ -2,6 +2,7 @@ package knapsack;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -47,12 +48,14 @@ public class Knapsack extends readData {
 		for (int i = 1; i <= NB_ITEMS; i++) {
 			// we iterate on each capacity
 			for (int j = 0; j <= capacity; j++) {
-				if (items[i - 1].weight > j)
+				if (items[i - 1].weight > j) {
 					matrix[i][j] = matrix[i - 1][j];
-				else
+				} else {
 					// we maximize value at this rank in the matrix
 					matrix[i][j] = Math.max(matrix[i - 1][j],
 							matrix[i - 1][j - items[i - 1].weight] + items[i - 1].value);
+				}
+
 			}
 		}
 
@@ -66,6 +69,7 @@ public class Knapsack extends readData {
 				// we remove items value and weight
 				res -= items[i - 1].value;
 				w -= items[i - 1].weight;
+				//items[i - 1] = null;
 			}
 		}
 
@@ -73,44 +77,52 @@ public class Knapsack extends readData {
 	}
 
 	public static void callKnapsack() throws IOException {
-		
+
 		ArrayList<String> nameList = new ArrayList<>();
-		ArrayList<Integer> minList = new ArrayList<>(); //weight
-		
+		ArrayList<Integer> minList = new ArrayList<>(); // weight
+
 		for (int i = 0; i < seminarNameArray().size(); i++) {
 			nameList.add(seminarNameArray().get(i));
 			minList.add(seminarMinArray().get(i));
 		}
-		
+
 		Random rand = new Random();
 		Set<Integer> generated = new LinkedHashSet<Integer>();
-		
+
 		// Prevent repeat
 		while (generated.size() < minList.size()) {
-		    generated.add(rand.nextInt(30));
+			generated.add(rand.nextInt(30));
 		}
-		
-		ArrayList<Integer> randList = new ArrayList<Integer>(generated); //value
-		
-		Integer[] minArray = new Integer[minList.size()]; 
-		minArray = minList.toArray(minArray); 
-		
-		Integer[] randArray = new Integer[randList.size()]; 
-		randArray = minList.toArray(randArray); 
 
-			Item[] items = {new Item("Elt1", randArray[0], minArray[0]),
-							new Item("Elt2", randArray[1], minArray[1]),
-							new Item("Elt3", randArray[2], minArray[2]),
-							new Item("Elt4", randArray[3], minArray[3]),
-							new Item("Elt5", randArray[4], minArray[4]),
-							new Item("Elt6", randArray[5], minArray[5]),};
-			
-			Knapsack knapsack = new Knapsack(items, 180);
-			knapsack.display();
-			Solution solution = knapsack.solve();
-			solution.display();
-		
+		ArrayList<Integer> randList = new ArrayList<Integer>(generated); // value
 
-		
+		Integer[] minArray = new Integer[minList.size()];
+		minArray = minList.toArray(minArray);
+
+		Integer[] randArray = new Integer[randList.size()];
+		randArray = minList.toArray(randArray);
+
+//		for (int i = 0; i < minList.size(); i++) {
+//			Item[] items = { new Item(nameList.get(i), randList.get(i), minList.get(i)) };
+			Item[] items = { new Item("Text1", 60, 60),
+							 new Item("Text2", 60, 60),
+							 new Item("Text3", 60, 60),
+							 new Item("Text4", 60, 60),
+							 new Item("Text5", 60, 60),
+							 new Item("Text6", 60, 60),
+							 new Item("Text7", 60, 60)};
+	
+//		}
+
+		Knapsack knapsack1 = new Knapsack(items, 180);
+//		knapsack1.display();
+		Solution solution1 = knapsack1.solve();
+		solution1.display();
+
+		Knapsack knapsack2 = new Knapsack(items, 240);
+//		knapsack2.display();
+		Solution solution2 = knapsack2.solve();
+		solution2.display();
+
 	}
 }
