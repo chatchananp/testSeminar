@@ -16,7 +16,7 @@ public class Solution {
 	
 	public void display() {
 		if (items != null  &&  !items.isEmpty()){
-			System.out.println("\nKnapsack solution");
+			System.out.println("Knapsack solution");
 			System.out.println("Items to pick :");
 			
 			for (Item item : items) {
