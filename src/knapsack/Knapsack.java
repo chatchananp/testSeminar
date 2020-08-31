@@ -107,7 +107,6 @@ public class Knapsack extends readData {
 			Integer random = randArray[i];
 			Integer minute = minArray[i];
 //			Item[] items = { new Item(name, random, minute) };
-
 		}
 		
 		//test
@@ -118,7 +117,7 @@ public class Knapsack extends readData {
 				 		 new Item("Text5", 60, 60),
 				 		 new Item("Text6", 60, 60),
 				 		 new Item("Text7", 60, 60)};
-//		Item[] items1 = { new Item(name, random, minute) };
+//		Item[] items = { new Item(nameList, randList, minList) };
 		
 		Knapsack knapsack1 = new Knapsack(items, 180);
 //		knapsack1.display();
@@ -130,6 +129,5 @@ public class Knapsack extends readData {
 //		knapsack2.display();
 		Solution solution2 = knapsack2.solve();
 		solution2.display();
-
 	}
 }

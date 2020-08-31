@@ -22,7 +22,7 @@ public class Solution {
 			for (Item item : items) {
 				System.out.println("- " + item.str());
 			}
-			System.out.println("\n");
+			System.out.println();
 		}
 	}
 
