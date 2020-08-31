@@ -16,11 +16,10 @@ public class Solution {
 	
 	public void display() {
 		if (items != null  &&  !items.isEmpty()){
-			System.out.println("Knapsack solution");
-			System.out.println("Items to pick :");
 			
-			for (Item item : items) {
-				System.out.println("- " + item.str());
+//			for (Item item : items) {
+			for (int i = 0; i < items.size(); i++) {
+				System.out.println(items.get(i).str());
 			}
 			System.out.println();
 		}
