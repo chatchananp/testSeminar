@@ -116,13 +116,13 @@ public class Knapsack extends readData {
 		}
 		
 		//test
-//		Item[] items = { new Item("Text1", 60, 60),
-//				 		 new Item("Text2", 60, 60),
-//				 		 new Item("Text3", 60, 60),
-//				 		 new Item("Text4", 60, 60),
-//				 		 new Item("Text5", 60, 60),
-//				 		 new Item("Text6", 60, 60),
-//				 		 new Item("Text7", 60, 60)};
+//		Item[] items = { new Item("Text1", randArray[1], 60),
+//				 		 new Item("Text2", randArray[2], 30),
+//				 		 new Item("Text3", randArray[3], 45),
+//				 		 new Item("Text4", randArray[4], 45),
+//				 		 new Item("Text5", randArray[5], 60),
+//				 		 new Item("Text6", randArray[6], 60),
+//				 		 new Item("Text7", randArray[7], 60)};
 ////		k1
 //		Knapsack knapsack1 = new Knapsack(items, 180);
 ////		knapsack1.display();
