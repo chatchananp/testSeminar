@@ -73,7 +73,8 @@ public class Item {
 	}
 	
 	public String str() {
-		return normalTime(weight) + " " + name + " " + weight + "min";
+		String BTime = normalTime(weight);
+		return BTime + " " + name + " " + weight + "min";
 	}
 
 }
