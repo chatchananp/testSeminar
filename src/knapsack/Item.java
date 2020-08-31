@@ -13,7 +13,7 @@ public class Item {
 	}
 	
 	public String str() {
-		return name + " [value = " + value + ", weight = " + weight + "]";
+		return name + " " + weight + "min";
 	}
 
 }
