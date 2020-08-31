@@ -60,4 +60,19 @@ public class Time {
 		String beginTime = beginT.format(dtf); //+ EndTime(userMinute);
 		return beginTime;
 	}
+	
+	void LunchTime(int userMinute) {
+		LocalTime LunchTime = seminarTime(12, 0);
+		System.out.print(LunchTime.format(dtf) + " ");
+		setHour(13);
+		setMinute(0);
+	}
+	
+	void NETime(int userMinute) {
+		LocalTime NETime = seminarTime(startHour, startMinute);
+		System.out.print(NETime.format(dtf) + " ");
+		setHour(9);
+		setMinute(0);
+		n++;
+	}
 }
