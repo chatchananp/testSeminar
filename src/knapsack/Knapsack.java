@@ -115,6 +115,13 @@ public class Knapsack extends readData {
 			
 		}
 		
+//		for (int i = 0; i < minList.size(); i++) {
+//			Knapsack knapsack1 = new Knapsack(items, 180);
+////			knapsack1.display();
+//			Solution solution1 = knapsack1.solve();
+//			solution1.display();
+//		}
+		
 		//test
 //		Item[] items = { new Item("Text1", randArray[1], 60),
 //				 		 new Item("Text2", randArray[2], 30),
@@ -122,7 +129,8 @@ public class Knapsack extends readData {
 //				 		 new Item("Text4", randArray[4], 45),
 //				 		 new Item("Text5", randArray[5], 60),
 //				 		 new Item("Text6", randArray[6], 60),
-//				 		 new Item("Text7", randArray[7], 60)};
+//				 		 new Item("Text7", randArray[7], 60),
+//						 new Item("Text8", randArray[8], 60)};
 ////		k1
 //		Knapsack knapsack1 = new Knapsack(items, 180);
 ////		knapsack1.display();
